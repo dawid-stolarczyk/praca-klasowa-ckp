@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- stworz formularz typu number z jakims id -->
+    <input type="number" id="formularz">
+    <!-- stworz przycisk ktory po kliknieciu ma pobrac dane z input'a i wyswietlic go w p ||
+        przycisk ma miec zdarzenie o nazwie onclick z odwolaniem do funkcji o nazwie oblicz
+    -->
+    <button id="przycisk" onclick="oblicz()">Oblicz</button>
+    <!-- stworz p z jakims id w ktorym ma sie wyswietlac wynik -->
+    <p id="wynik"></p>
+
+    <script>
+        // stworz funkcje
+        function oblicz() {
+            // zdefiniuj zmienna x ktora bedzie trzymac w sobie wartosc wpisana w input 
+            // ten ('formularz') to jest nazwa id inputa
+            var x = document.getElementById('formularz').value
+            // wez pole p i wstaw tam zmienną pomnożoną przez 10
+            // innerHTML to jest zeby wstawilo jakis tekst w zdefiniowane pole
+            // ten ('wynik') to jest nazwa id tego p 
+            document.getElementById('wynik').innerHTML = x * 10
+        }
+    </script>
+</body>
+
+</html>
